@@ -10,7 +10,8 @@ const portfolioSchema = z.array(
     format: z.string().min(1),
     outcome: z.string().min(1),
     tone: z.string().min(1),
-    image: z.string().url()
+    image: z.string().min(1),
+    imageAlt: z.string().min(1)
   })
 );
 

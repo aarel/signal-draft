@@ -1,4 +1,3 @@
-// TODO: Replace with your own images
 export const portfolio = [
   {
     title: 'Compliance thought-leadership mini series',
@@ -6,7 +5,8 @@ export const portfolio = [
     format: '4-post LinkedIn bundle',
     outcome: 'Increased inbound consult calls by 2x in 6 weeks.',
     tone: 'Precise, confident, benchmark-driven.',
-    image: 'https://placehold.co/400x300'
+    image: '/images/portfolio-sample-1.svg',
+    imageAlt: 'Analytics card showing compliance post performance'
   },
   {
     title: 'Veteran founder spotlight',
@@ -14,7 +14,8 @@ export const portfolio = [
     format: 'Feature article + supporting LinkedIn post',
     outcome: 'Drove 1,800+ views and 23 qualified comments.',
     tone: 'Direct, mission-first, no fluff.',
-    image: 'https://placehold.co/400x300'
+    image: '/images/portfolio-sample-2.svg',
+    imageAlt: 'Feature layout blocks for a veteran founder story'
   },
   {
     title: 'Career pivot explainer',
@@ -22,6 +23,7 @@ export const portfolio = [
     format: 'LinkedIn carousel + summary post',
     outcome: 'Boosted profile visits by 64% week-over-week.',
     tone: 'Clear steps, credible proof, CTA to connect.',
-    image: 'https://placehold.co/400x300'
+    image: '/images/portfolio-sample-3.svg',
+    imageAlt: 'Carousel slides outlining a career pivot plan'
   }
 ];

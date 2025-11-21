@@ -1,0 +1,20 @@
+<svg width="360" height="260" viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sample1Title sample1Desc">
+  <title id="sample1Title">Compliance thought-leadership card</title>
+  <desc id="sample1Desc">Abstract representation of a LinkedIn carousel with analytics badge.</desc>
+  <defs>
+    <linearGradient id="sample1Gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2d4d" />
+      <stop offset="100%" stop-color="#132840" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="260" rx="26" fill="url(#sample1Gradient)" />
+  <rect x="32" y="32" width="296" height="80" rx="12" fill="#0f1c2f" stroke="#203554" />
+  <rect x="48" y="52" width="180" height="12" rx="6" fill="#4dd2c0" />
+  <rect x="48" y="74" width="220" height="10" rx="5" fill="#9fb3e2" />
+  <rect x="32" y="132" width="296" height="80" rx="16" fill="#152545" stroke="#1f3654" />
+  <rect x="48" y="152" width="132" height="12" rx="6" fill="#cbd5f5" />
+  <rect x="48" y="174" width="172" height="10" rx="5" fill="#94a3b8" />
+  <rect x="230" y="144" width="76" height="56" rx="12" fill="#0f1c2f" stroke="#264062" />
+  <path d="M246 184c14-24 22-36 34-36s16 12 26 28" stroke="#4dd2c0" stroke-width="4" fill="none" stroke-linecap="round" />
+  <circle cx="262" cy="188" r="6" fill="#4dd2c0" />
+</svg>

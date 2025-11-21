@@ -1,0 +1,23 @@
+<svg width="360" height="260" viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sample3Title sample3Desc">
+  <title id="sample3Title">Career pivot explainer mock</title>
+  <desc id="sample3Desc">Stylized slides representing carousel steps and KPIs.</desc>
+  <defs>
+    <linearGradient id="sample3Gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#132036" />
+      <stop offset="100%" stop-color="#192946" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="260" rx="26" fill="url(#sample3Gradient)" />
+  <rect x="40" y="44" width="280" height="60" rx="14" fill="#0f1c2f" stroke="#243857" />
+  <rect x="60" y="62" width="160" height="12" rx="6" fill="#4dd2c0" />
+  <rect x="60" y="84" width="200" height="10" rx="5" fill="#cbd5f5" />
+  <rect x="36" y="128" width="120" height="96" rx="18" fill="#101c31" stroke="#213150" />
+  <rect x="52" y="150" width="88" height="10" rx="5" fill="#e2e8f0" />
+  <rect x="52" y="170" width="72" height="8" rx="4" fill="#94a3b8" />
+  <rect x="52" y="188" width="60" height="8" rx="4" fill="#4dd2c0" />
+  <rect x="204" y="118" width="120" height="112" rx="20" fill="#111c31" stroke="#1d2e4c" />
+  <rect x="220" y="140" width="84" height="12" rx="6" fill="#f8ba5f" />
+  <rect x="220" y="164" width="96" height="10" rx="5" fill="#cbd5f5" />
+  <rect x="220" y="184" width="96" height="10" rx="5" fill="#94a3b8" />
+  <rect x="220" y="206" width="76" height="10" rx="5" fill="#4dd2c0" />
+</svg>

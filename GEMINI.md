@@ -60,6 +60,7 @@ The following commands are used to build, run, and test the project. They are de
 ## Development Conventions
 
 *   **Content Management:** Data that changes often (services, portfolio, CTA labels/targets, and contact form fields) is centralized in `src/content/{services,portfolio,cta,contactForm}.ts`. Narrative copy stays in the relevant components (e.g., `Hero.astro`, `Process.astro`).
+*   **Assets:** Illustrations for the hero collage and portfolio cards live in `public/images/`. Replace `hero-collage.svg` or the `portfolio-sample-*.svg` files (and update `src/content/portfolio.ts` if needed) to bring in custom artwork.
 *   **Testing:** The project uses Vitest for testing. Tests under `site/tests/` validate the service/portfolio schemas with `zod` and add guardrails for CTA anchors plus the contact form configuration. Component rendering tests are not enabled to keep dependencies light.
 *   **Styling:** Styling is primarily handled by Tailwind CSS classes directly in the Astro components. Global styles are located in `src/styles/global.css`.
 *   **Performance:**

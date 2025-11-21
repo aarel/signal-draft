@@ -20,13 +20,14 @@ Prereqs: Node 20+, npm.
 - Lead form: set `PUBLIC_FORM_ENDPOINT` in `.env` (Formspree/Getform/etc.). See `.env.example`. Update the email copy in `src/components/Contact.astro`.
 - Analytics/embeds: add scripts in `src/layouts/BaseLayout.astro`; document any new env vars in `.env.example`.
 - Branding: update `public/favicon.svg`, colors in `tailwind.config.cjs`, and global look in `src/styles/global.css`.
+- Imagery: replace the SVGs under `public/images/` or point `src/content/portfolio.ts` entries to your own assets.
 
 ## Project Structure
 - `src/pages/index.astro` — page shell assembling sections.
 - `src/components/` — hero, services, process, portfolio, about, CTA, contact, footer.
 - `src/content/` — data modules for services, portfolio, CTA buttons, and the contact form (`services.ts`, `portfolio.ts`, `cta.ts`, `contactForm.ts`).
 - `src/styles/global.css` — global styles (fonts, background, helper classes).
-- `public/` — static assets (`favicon.svg`, `robots.txt`).
+- `public/` — static assets (`favicon.svg`, `robots.txt`, hero + portfolio art under `images/`).
 - `tests/` — Vitest coverage for content schemas and CTA/form regressions.
 
 ## Deployment
