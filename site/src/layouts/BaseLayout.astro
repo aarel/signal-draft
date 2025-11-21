@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+const { title = 'SignalDraft Ghostwriting', description = 'Lean ghostwriting studio crafting LinkedIn posts and articles for tech, compliance, veteran, and career leaders.', page } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{page ? `${page} · ${title}` : title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={page ? `${page} · ${title}` : title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://placehold.co/1200x630" />
+    {/* TODO: Replace with your own image */}
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-ink-900 text-slate-100 antialiased">
+    <slot />
+  </body>
+</html>

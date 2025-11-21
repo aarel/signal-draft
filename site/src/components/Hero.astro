@@ -1,0 +1,80 @@
+---
+import { heroCtas } from '../content/cta';
+
+const variantClasses = {
+  primary:
+    'inline-flex items-center justify-center rounded-full bg-signal-500 px-6 py-3 text-base font-semibold text-ink-900 shadow-card hover:bg-signal-400 transition-colors',
+  secondary:
+    'inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white hover:border-signal-400 hover:text-signal-400 transition-colors'
+};
+---
+
+<section class="section pt-10" id="top">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <p class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-slate-300">
+        LinkedIn posts + short articles
+      </p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+        Ghostwriting that keeps founders sounding sharp, credible, and consistent.
+      </h1>
+      <p class="text-lg text-slate-200 max-w-2xl">
+        We turn scattered notes into ready-to-publish posts and articles for tech, compliance, veteran, and career-focused leaders. Voice-true drafts, fast cycles, and clear proof baked in.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        {heroCtas.map((cta) => (
+          <a href={cta.href} class={variantClasses[cta.variant]} key={cta.label}>
+            {cta.label}
+          </a>
+        ))}
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-slate-300">
+        <div class="glass rounded-xl p-3">
+          <p class="text-xs text-slate-400">Turnaround</p>
+          <p class="text-base font-semibold text-white">3–5 day draft cycles</p>
+        </div>
+        <div class="glass rounded-xl p-3">
+          <p class="text-xs text-slate-400">Proof-first</p>
+          <p class="text-base font-semibold text-white">Hooks + evidence baked in</p>
+        </div>
+        <div class="glass rounded-xl p-3">
+          <p class="text-xs text-slate-400">Voice kit</p>
+          <p class="text-base font-semibold text-white">Tone guardrails locked</p>
+        </div>
+        <div class="glass rounded-xl p-3">
+          <p class="text-xs text-slate-400">ICP focus</p>
+          <p class="text-base font-semibold text-white">Tech • Compliance • Veteran • Career</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-5 glass rounded-2xl p-6 space-y-5 border border-white/10 shadow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-slate-300 text-sm">Positioning Snapshot</p>
+          <p class="text-white font-semibold text-xl">Quiet authority, not loud takes.</p>
+        </div>
+        <div class="h-12 w-12 rounded-full bg-signal-500/20 border border-signal-500/50 flex items-center justify-center text-signal-400 font-semibold">
+          QA
+        </div>
+      </div>
+      <div class="space-y-3 text-sm text-slate-200">
+        <div class="flex items-start gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-signal-400"></span>
+          <p>Rapid intake via 15-minute call or async doc; we map your proof and claims so every post sounds like you.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-signal-400"></span>
+          <p>Drafts include hooks, receipts, and CTAs matched to your funnel (demo, booking, or connect).</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-signal-400"></span>
+          <p>Built for LinkedIn but repurpose-ready for newsletters or company blog.</p>
+        </div>
+      </div>
+      <a href="#services" class="inline-flex items-center gap-2 text-signal-400 font-semibold hover:text-signal-300 transition-colors">
+        See how we work
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

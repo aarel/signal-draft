@@ -1,0 +1,61 @@
+---
+import { contactFields } from '../content/contactForm';
+
+const formEndpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || 'https://formspree.io/f/your-form-id';
+
+const baseInputClasses =
+  'w-full rounded-xl bg-ink-800 border border-white/15 px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-signal-400';
+---
+
+<section class="section" id="contact">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+    <div class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Contact</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white">Ready to publish with less lift?</h2>
+      <p class="text-slate-200 max-w-xl">
+        Send a quick brief or book a call. We’ll confirm fit, map your voice, and ship your first drafts within the week.
+      </p>
+      <div class="glass rounded-2xl p-5 border border-white/10 shadow-card space-y-3 text-sm text-slate-200">
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-signal-400"></span>
+          <span>Preferred: LinkedIn message or the form. Calendly embed optional; add once you connect.</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-signal-400"></span>
+          <span>Typical response: under 24 hours with a concise plan for your first two posts.</span>
+        </div>
+        <p class="text-xs text-slate-400">Backup email: hello@signaldraft.studio (replace with your inbox).</p>
+      </div>
+    </div>
+    <form class="glass rounded-2xl p-6 border border-white/10 shadow-card space-y-4" action={formEndpoint} method="POST">
+      {contactFields.map((field) => (
+        <div key={field.id}>
+          <label for={field.id} class="block text-sm text-slate-300 mb-1">{field.label}</label>
+          {field.kind === 'textarea' ? (
+            <textarea
+              id={field.id}
+              name={field.name}
+              rows={field.rows || 4}
+              class={baseInputClasses}
+              placeholder={field.placeholder}
+              required={field.required}
+            />
+          ) : (
+            <input
+              id={field.id}
+              type={field.type || 'text'}
+              name={field.name}
+              required={field.required}
+              class={baseInputClasses}
+              placeholder={field.placeholder}
+            />
+          )}
+        </div>
+      ))}
+      <button type="submit" class="w-full inline-flex items-center justify-center rounded-xl bg-signal-500 px-4 py-3 text-base font-semibold text-ink-900 shadow-card hover:bg-signal-400 transition-colors">
+        Send inquiry
+      </button>
+      <p class="text-xs text-slate-400">Form posts to {formEndpoint}. Replace with your Formspree/Getform endpoint.</p>
+    </form>
+  </div>
+</section>

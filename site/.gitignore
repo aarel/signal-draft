@@ -1,0 +1,9 @@
+node_modules
+.astro
+.vercel
+.netlify
+dist
+.DS_Store
+.env
+.env.local
+coverage

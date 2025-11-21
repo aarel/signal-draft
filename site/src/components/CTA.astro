@@ -1,0 +1,27 @@
+---
+import { bookingCtas } from '../content/cta';
+
+const variantClasses = {
+  primary:
+    'inline-flex items-center justify-center rounded-full bg-signal-500 px-6 py-3 text-base font-semibold text-ink-900 shadow-card hover:bg-signal-400 transition-colors',
+  secondary:
+    'inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-base font-semibold text-white hover:border-signal-400 hover:text-signal-400 transition-colors'
+};
+---
+
+<section class="section pb-12">
+  <div class="max-w-5xl mx-auto glass rounded-3xl p-8 md:p-10 border border-white/10 shadow-card text-center space-y-4">
+    <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Next step</p>
+    <h2 class="text-3xl md:text-4xl font-semibold text-white">Let’s draft your next post this week.</h2>
+    <p class="text-lg text-slate-200 max-w-3xl mx-auto">
+      Share a voice memo or a few bullet points. We’ll map the hook, proof, and CTA, then send a ready-to-publish draft in under 72 hours.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      {bookingCtas.map((cta) => (
+        <a href={cta.href} class={variantClasses[cta.variant]} key={cta.label}>
+          {cta.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

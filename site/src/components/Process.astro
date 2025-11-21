@@ -1,0 +1,47 @@
+---
+const steps = [
+  {
+    title: 'Kickoff + voice kit',
+    detail: '15-minute call or async form. We capture tone, claims, and approvals so drafts ship on-brand.',
+    tag: 'Week 0'
+  },
+  {
+    title: 'Draft + proof',
+    detail: 'Hooks, evidence, and CTA aligned to your ICP. Delivered as Google Docs or scheduled-ready posts.',
+    tag: '48–72 hrs'
+  },
+  {
+    title: 'Revise + schedule',
+    detail: 'Two rounds of edits, final polish, and optional scheduling support for LinkedIn.',
+    tag: 'Same week'
+  }
+];
+---
+
+<section class="section" id="process">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-4">
+      <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Process</p>
+      <h2 class="text-3xl md:text-4xl font-semibold text-white">Built for founders who move fast.</h2>
+      <p class="text-slate-200 max-w-xl">
+        Clear checks at each stage. You approve the voice once, then free up headspace while consistent content ships every week.
+      </p>
+      <div class="flex items-center gap-3 text-sm text-slate-300">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-signal-500/20 border border-signal-400/40 text-signal-400 font-semibold">QA</span>
+        <p>Quiet Authority standard: no clickbait, no hollow platitudes — just credible, founder-led narrative.</p>
+      </div>
+    </div>
+    <div class="space-y-4">
+      {steps.map((step, index) => (
+        <div class="glass rounded-2xl p-5 border border-white/10 shadow-card" key={step.title}>
+          <div class="flex items-center justify-between mb-2">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{step.tag}</p>
+            <p class="text-sm text-white/70">Step {index + 1}</p>
+          </div>
+          <h3 class="text-xl font-semibold text-white">{step.title}</h3>
+          <p class="text-slate-200 text-sm mt-2">{step.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
