@@ -9,7 +9,8 @@ const portfolioSchema = z.array(
     niche: z.string().min(1),
     format: z.string().min(1),
     outcome: z.string().min(1),
-    tone: z.string().min(1)
+    tone: z.string().min(1),
+    image: z.string().url()
   })
 );
 

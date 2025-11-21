@@ -15,7 +15,7 @@ This is a single-page marketing and portfolio website for a ghostwriting service
 
 **Architecture:**
 
-The project follows a component-based architecture, with Astro components in `src/components/` assembling the main page at `src/pages/index.astro`. Layout and most page copy live directly inside those section components (Hero, Process, About, CTA, Contact, etc.) so marketing edits generally happen there. Content that benefits from being data-driven (services and portfolio samples) is stored in TypeScript modules under `src/content/` to simplify frequent updates without touching layout markup.
+The project follows a component-based architecture, with Astro components in `src/components/` assembling the main page at `src/pages/index.astro`. Layout and most long-form copy live directly inside those section components (Hero, Process, About, etc.). Content that benefits from being data-driven—services, portfolio samples, CTA buttons, and the contact form fields—is stored in TypeScript modules under `src/content/` so key marketing elements can be updated without editing layout code.
 
 ## Building and Running
 
@@ -59,7 +59,12 @@ The following commands are used to build, run, and test the project. They are de
 
 ## Development Conventions
 
-*   **Content Management:** Services/portfolio data is centralized in `src/content/`. Other copy blocks currently live in their respective components (e.g., `Hero.astro`, `Process.astro`, `Contact.astro`). To update data-driven sections, edit `src/content/portfolio.ts` or `src/content/services.ts`; to update narrative copy, work in the matching component.
-*   **Testing:** The project uses Vitest for testing. Tests are located in the `site/tests/` directory. The current test suite focuses on data validation using `zod` to ensure the content in `src/content/` conforms to the expected schema. Component tests were previously attempted but have been removed due to dependency issues.
-*   **Styling:** Styling is primarily handled by Tailwind CSS classes directly in the Astro components. Global styles and font definitions are located in `src/styles/global.css`.
+*   **Content Management:** Data that changes often (services, portfolio, CTA labels/targets, and contact form fields) is centralized in `src/content/{services,portfolio,cta,contactForm}.ts`. Narrative copy stays in the relevant components (e.g., `Hero.astro`, `Process.astro`).
+*   **Testing:** The project uses Vitest for testing. Tests under `site/tests/` validate the service/portfolio schemas with `zod` and add guardrails for CTA anchors plus the contact form configuration. Component rendering tests are not enabled to keep dependencies light.
+*   **Styling:** Styling is primarily handled by Tailwind CSS classes directly in the Astro components. Global styles are located in `src/styles/global.css`.
+*   **Performance:**
+    *   **Font Loading:** The Google Fonts are loaded in `src/layouts/BaseLayout.astro` using `<link>` tags with `preconnect` for optimal performance.
+*   **SEO:**
+    *   **Canonical URL:** A canonical URL is automatically generated for each page using `Astro.url.href` in `src/layouts/BaseLayout.astro`.
+    *   **Open Graph:** `og:title`, `og:description`, and `og:image` meta tags are included in `src/layouts/BaseLayout.astro`. The `og:image` is currently a placeholder and should be replaced with a real image.
 *   **Configuration:** The lead generation form endpoint is configured via the `PUBLIC_FORM_ENDPOINT` environment variable in the `.env` file. An example is provided in `.env.example`.

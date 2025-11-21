@@ -16,6 +16,7 @@ import { portfolio } from '../content/portfolio';
     <div class="grid md:grid-cols-3 gap-6">
       {portfolio.map((item) => (
         <article class="glass rounded-2xl p-6 border border-white/10 shadow-card space-y-3" key={item.title}>
+          <img src={item.image} alt={item.title} class="rounded-lg" />
           <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{item.niche}</p>
           <h3 class="text-xl font-semibold text-white">{item.title}</h3>
           <p class="text-sm text-slate-200">{item.format}</p>
